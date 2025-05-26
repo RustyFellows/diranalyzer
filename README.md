@@ -38,7 +38,7 @@ DirAnalyzer is a blazingly fast, feature-rich CLI tool that transforms the way y
 
 #### 🚀 One-Line Install (Recommended)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/diranalyzer/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/RustyFellows/diranalyzer/main/install.sh | bash
 ```
 
 #### 📦 Alternative Installation Methods
