@@ -1,6 +1,6 @@
 # 🚀 DirAnalyzer - Lightning-Fast Directory Analysis Tool
 
-[![Build Status](https://github.com/yourusername/diranalyzer/workflows/CI/badge.svg)](https://github.com/yourusername/diranalyzer/actions)
+[![Build Status](https://github.com/yourusername/diranalyzer/workflows/CI/badge.svg)](https://github.com/RustyFellows/diranalyzer/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Crates.io](https://img.shields.io/crates/v/diranalyzer.svg)](https://crates.io/crates/diranalyzer)
 [![Downloads](https://img.shields.io/crates/d/diranalyzer.svg)](https://crates.io/crates/diranalyzer)
@@ -36,15 +36,51 @@ DirAnalyzer is a blazingly fast, feature-rich CLI tool that transforms the way y
 
 ### Installation
 
+#### 🚀 One-Line Install (Recommended)
 ```bash
-# Install from crates.io (coming soon!)
-cargo install diranalyzer
+curl -fsSL https://raw.githubusercontent.com/yourusername/diranalyzer/main/install.sh | bash
+```
 
-# Or build from source
+#### 📦 Alternative Installation Methods
+
+**From Script (with options):**
+```bash
+# Download and run installer
+wget https://raw.githubusercontent.com/yourusername/diranalyzer/main/install.sh
+chmod +x install.sh
+./install.sh
+```
+
+**Using Make:**
+```bash
+git clone https://github.com/yourusername/diranalyzer.git
+cd diranalyzer
+make install
+```
+
+**From Crates.io (coming soon!):**
+```bash
+cargo install diranalyzer
+```
+
+**Build from Source:**
+```bash
 git clone https://github.com/yourusername/diranalyzer.git
 cd diranalyzer
 cargo build --release
 ./target/release/diranalyzer --help
+```
+
+#### 🗑️ Easy Uninstall
+```bash
+# Quick uninstall
+./uninstall.sh
+
+# Or using the installer
+./install.sh --uninstall
+
+# Force removal
+./uninstall.sh --force
 ```
 
 ### Basic Usage
@@ -149,6 +185,56 @@ DirAnalyzer is designed for speed and efficiency:
 
 *Benchmarks performed on Ubuntu 22.04 with SSD storage*
 
+## 🛠️ Development & Build Tools
+
+We've included a comprehensive set of tools to make development and distribution seamless:
+
+### 📋 **Makefile Targets**
+```bash
+make help          # Show all available commands
+make build         # Build release binary
+make install       # Install system-wide
+make uninstall     # Remove completely
+make test          # Run all tests
+make fmt           # Format code
+make clippy        # Run lints
+make docs          # Generate documentation
+make dev           # Full development check
+make ci            # CI pipeline
+make demo          # Run demo analysis
+make package       # Create distribution package
+make setup-dev     # Setup development environment
+```
+
+### 🚀 **Installation Scripts**
+
+**Smart Installer (`install.sh`):**
+- ✅ Auto-detects system architecture (x86_64, ARM64)
+- ✅ Supports Linux and macOS
+- ✅ Downloads pre-built binaries or builds from source
+- ✅ Handles permissions automatically
+- ✅ Creates desktop entries and PATH setup
+- ✅ Beautiful progress indicators and error handling
+
+**Professional Uninstaller (`uninstall.sh`):**
+- ✅ Complete removal of all files and configurations
+- ✅ Interactive mode with selective removal options
+- ✅ Finds installations in multiple locations
+- ✅ Cleans up PATH modifications with backup
+- ✅ Force mode and dry-run capabilities
+
+**Quick Commands:**
+```bash
+# Install with options
+./install.sh --help
+./install.sh --version
+
+# Uninstall with options
+./uninstall.sh --interactive
+./uninstall.sh --force
+./uninstall.sh --dry-run
+```
+
 ## 🔧 Advanced Configuration
 
 ### Environment Variables
@@ -163,20 +249,47 @@ Use powerful glob patterns to exclude files:
 # Exclude common development artifacts
 diranalyzer . --exclude "node_modules" --exclude "target" --exclude "*.log"
 
-# Exclude by file size (combine with other tools)
-find . -size +100M | diranalyzer --stdin
+# Complex pattern matching
+diranalyzer /home --exclude "*.tmp" --exclude "*.cache" --exclude ".git"
+```
+
+### 🔧 **Build Options**
+```bash
+# Different build types
+make build          # Release build (optimized)
+make build-debug    # Debug build (with symbols)
+make release        # Full release pipeline
+
+# Development workflow
+make watch          # Auto-rebuild on changes
+make dev            # Format + lint + test
+make size           # Analyze binary size
 ```
 
 ## 🏗️ Architecture
 
-DirAnalyzer is built with modern Rust practices:
+DirAnalyzer is built with modern Rust practices and enterprise-grade tooling:
 
+### 🦀 **Core Technologies**
 - **Async/Await**: Non-blocking I/O operations using Tokio
 - **Parallel Processing**: Multi-threaded file hashing with Rayon
 - **Memory Safety**: Zero-cost abstractions with compile-time guarantees
 - **Error Handling**: Robust error management with anyhow
 - **CLI Framework**: Intuitive command-line interface with clap
 - **Serialization**: Fast JSON/CSV export with serde
+
+### 🔧 **Development Tools**
+- **Comprehensive Makefile**: 20+ build targets for every workflow
+- **Smart Installation**: Cross-platform installer with auto-detection
+- **Professional Uninstaller**: Complete removal with backup safety
+- **CI/CD Pipeline**: Automated testing, formatting, and security audits
+- **Development Environment**: One-command setup for contributors
+
+### 📊 **Quality Assurance**
+- **Memory Efficient**: Optimized for massive directory trees
+- **Error Resilient**: Graceful handling of permission issues
+- **Cross-Platform**: Native support for Linux and macOS
+- **Security Focused**: SHA-256 hashing and secure file operations
 
 ## 🤝 Contributing
 
@@ -202,12 +315,18 @@ Ready to contribute code?
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Make your changes
 4. Add tests if applicable
-5. Run the test suite: `cargo test`
-6. Run formatting: `cargo fmt`
-7. Run linting: `cargo clippy`
-8. Commit your changes: `git commit -m 'Add amazing feature'`
-9. Push to the branch: `git push origin feature/amazing-feature`
-10. Open a Pull Request
+5. Run the development workflow: `make dev`
+6. Test your changes: `make demo`
+7. Commit your changes: `git commit -m 'Add amazing feature'`
+8. Push to the branch: `git push origin feature/amazing-feature`
+9. Open a Pull Request
+
+**Quick Development Setup:**
+```bash
+make setup-dev    # Install all development tools
+make dev          # Run full development pipeline
+make watch        # Auto-rebuild during development
+```
 
 ### 🧪 Development Setup
 
@@ -263,8 +382,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ by the DirAnalyzer team**
+**Made with ❤️ by RustyFellows team**
 
-[⭐ Star us on GitHub](https://github.com/yourusername/diranalyzer) | [🐦 Follow on Twitter](https://twitter.com/diranalyzer) | [📧 Newsletter](https://diranalyzer.dev/newsletter)
+[⭐ Star us on GitHub](https://github.com/RustyFellow/diranalyzer) | [🐦 Follow on Twitter](https://twitter.com/diranalyzer) 
 
 </div>
