@@ -384,6 +384,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by RustyFellows team**
 
-[⭐ Star us on GitHub](https://github.com/RustyFellow/diranalyzer) | [🐦 Follow on Twitter](https://twitter.com/diranalyzer) 
+[⭐ Star us on GitHub](https://github.com/RustyFellows/diranalyzer) | [🐦 Follow on Twitter](https://twitter.com/diranalyzer) 
 
 </div>
