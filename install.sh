@@ -17,7 +17,7 @@ NC='\033[0m' # No Color
 # Configuration
 INSTALL_DIR="/usr/local/bin"
 BINARY_NAME="diranalyzer"
-REPO_URL="https://github.com/yourusername/diranalyzer"
+REPO_URL="https://github.com/RustyFellows/diranalyzer"
 VERSION="latest"
 
 # Banner
