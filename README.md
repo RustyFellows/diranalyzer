@@ -372,11 +372,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Users who provide feedback and bug reports
 
 ## 📞 Support
-
-- 📖 **Documentation**: [Full documentation](https://docs.rs/diranalyzer)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/diranalyzer/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/diranalyzer/discussions)
-- 📧 **Email**: support@diranalyzer.dev
+- 📧 **Email**: rustyfellows@proton.mail
 
 ---
 
@@ -384,6 +381,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by RustyFellows team**
 
-[⭐ Star us on GitHub](https://github.com/RustyFellows/diranalyzer) | [🐦 Follow on Twitter](https://twitter.com/diranalyzer) 
+[⭐ Star us on GitHub](https://github.com/RustyFellows/diranalyzer) 
 
 </div>
